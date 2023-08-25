@@ -17,7 +17,7 @@ const initAdminUser = (app, next) => {
 
   const adminUser = {
     email: adminEmail,
-    password: bcrypt.hashSync(adminPassword, 10),
+    password: bcrypt.hashSync(adminPassword, 10), // prueba aumentar timeout
     roles: { admin: true },
   };
 
