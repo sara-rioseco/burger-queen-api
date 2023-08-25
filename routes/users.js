@@ -18,7 +18,7 @@ const initAdminUser = async (app, next) => {
   }
 
   try {
-    const existingAdmin = await User.findOne({ email: adminEmail });
+    const existingAdmin = await User.findOne({ email: adminEmail }).timeout(30000);
     if (!existingAdmin) {
       const adminUser = new User({
         email: adminEmail,
