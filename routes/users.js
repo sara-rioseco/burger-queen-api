@@ -27,6 +27,8 @@ const initAdminUser = async (app, next) => {
       });
       await adminUser.save();
       console.log('Usuario administrador creado con éxito.');
+    } else {
+      console.log('Usuario ya existe');
     }
   } catch (error) {
     console.error('Error al crear el usuario administrador:', error);
