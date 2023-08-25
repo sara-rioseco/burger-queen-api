@@ -25,10 +25,14 @@ routes(app, (err) => {
 
   app.use(errorHandler);
 
-  app.listen(port, () => {
-    console.info(`App listening on port ${port}`);
-  /*   connect()
-      .then(console.info)
-      .catch(error => console.error(error)); */
-  });
+ // Conectar a la base de datos y luego iniciar el servidor
+ connect()
+ .then(() => {
+   app.listen(port, () => {
+     console.info(`App listening on port ${port}`);
+   });
+ })
+ .catch(error => {
+   console.error('Error index al conectar la base de datos:', error);
+ });
 });
