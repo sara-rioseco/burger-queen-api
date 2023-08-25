@@ -11,37 +11,26 @@ const {
   getUsers,
 } = require('../controller/users');
 
-const initAdminUser = (app, next) => {
+const initAdminUser = async (app, next) => {
   const { adminEmail, adminPassword } = app.get('config');
   if (!adminEmail || !adminPassword) {
     return next();
   }
 
-  const adminUser = {
-    email: adminEmail,
-    password: adminPassword,
-    // password: bcrypt.hashSync(adminPassword, 10),
-    role: 'admin',
-  };
-  console.log('hasta aquí voy bien', adminUser)
-  console.log('hasta aquí sigo bien, creo', User)
-  const userExists = User.findOne({ email: adminUser.email })
-  .then((res) => console.log('hasta aquí sigo bien', userExists, res))
-  .then(() => {
-    if (!userExists) {
-      try {
-          const user = new User(adminUser);
-          user.save();
-      } catch (error) {
-          console.error(error);
-          console.log('excepción aquí', adminUser);
-      }
+  try {
+    const existingAdmin = await User.findOne({ email: adminEmail });
+    if (!existingAdmin) {
+      const adminUser = new User({
+        email: adminEmail,
+        password: bcrypt.hashSync(adminPassword, 10),
+        role: 'admin',
+      });
+      await adminUser.save();
+      console.log('Usuario administrador creado con éxito.');
     }
-  })
-  .catch(err => {
-    console.error(err);
-    console.log('otra excepción aquí', adminUser);
-  });
+  } catch (error) {
+    console.error('Error al crear el usuario administrador:', error);
+  }
   next();
 };
 
