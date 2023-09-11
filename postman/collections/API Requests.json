@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "589ce290-4cc0-4fbd-9398-259019f7eb20",
+		"_postman_id": "23ba107f-0aee-456a-a437-4791d1ef9010",
 		"name": "API Requests",
 		"description": "Collection with all the possible API requests and all available endpoints.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "28724924-589ce290-4cc0-4fbd-9398-259019f7eb20"
+		"_uid": "28724924-23ba107f-0aee-456a-a437-4791d1ef9010"
 	},
 	"item": [
 		{
@@ -12,7 +12,7 @@
 			"item": [
 				{
 					"name": "/auth",
-					"id": "25d511f0-bbac-4ff6-a0e8-04b3d72a8e3e",
+					"id": "b7859fb1-fa79-49fa-ac67-cb4ce42874d6",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -21,7 +21,127 @@
 							"type": "noauth"
 						},
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"name": "cache-control",
+								"sortOrder": 2,
+								"infoTitle": "We recommend using this header",
+								"info": "Postman added \"Cache-Control: no-cache\" as a precautionary measure to prevent the server from returning stale response when one makes repeated requests.\n\nYou can remove this header in the app settings or enter a new one with a different value.",
+								"allowedToToggle": false,
+								"disableEdit": true,
+								"previewSettingsLink": "Go to settings",
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "postman-token",
+								"sortOrder": 3,
+								"infoTitle": "We recommend using this header",
+								"info": "The Postman-Token header appends a random UUID to every outgoing request. Postman adds this header for API developers to better debug requests sent and to ensure separate requests appear distinct to the receiving server.\n\nYou can remove this header in the app settings.",
+								"allowedToToggle": false,
+								"disableEdit": true,
+								"previewSettingsLink": "Go to settings",
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "content-type",
+								"sortOrder": 4,
+								"infoTitle": "This header was automatically added",
+								"info": "The Content-Type header is added to help the server identify the media type of the request body that is present in this request.\n\nUse the request body tab to control the value or to remove this header.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"previewSettingsLink": "Go to body",
+								"key": "Content-Type",
+								"value": "application/json",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "content-length",
+								"sortOrder": 5,
+								"infoTitle": "This header was automatically added",
+								"info": "The Content-Length header was added to indicate to the server the size of the request body that is added to this request. Server uses this value to parse the request body accurately.\n\nYou can remove the header or enter a new one with a different value.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"previewSettingsLink": "Go to body",
+								"key": "Content-Length",
+								"value": "<calculated when request is sent>",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "host",
+								"sortOrder": 6,
+								"infoTitle": "We recommend using this header",
+								"info": "The Host header is added to identify the domain name for which a request is being sent to the server. This header is implicitly sent by every HTTP client.\n\nYou can remove the header or enter a new one with a different value. It is most likely that without this header, your request will return an HTTP 400 error.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "user-agent",
+								"sortOrder": 7,
+								"infoTitle": "We recommend using this header",
+								"info": "The User-Agent header is added to help the server identify Postman as the HTTP requesting application or client.\n\nIt is recommended that this header be sent, but you can remove the header or enter a new one with a different value.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.32.1",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "accept",
+								"sortOrder": 8,
+								"infoTitle": "We recommend using this header",
+								"info": "The \"Accept: */*\" header is added to tell the server that Postman can understand and process all forms of response content types.\n\nIt is recommended that this header be sent, but you can remove the header or enter a new one with a different value.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Accept",
+								"value": "*/*",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "accept-encoding",
+								"sortOrder": 9,
+								"infoTitle": "We recommend using this header",
+								"info": "The Accept-Encoding header is added to indicate to the server that Postman HTTP client supports a defined list of content-encoding or compression algorithms as response.\n\nYou can remove the header or enter a new one with a different value. Doing that may not accurately render the response within the app.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "connection",
+								"sortOrder": 10,
+								"infoTitle": "We recommend using this header",
+								"info": "Postman added the Connection header to indicate the server to keep the underlying network connection open once the current response is received. This allows Postman to reuse the same connection for faster response times in subsequent requests to the same server.\n\nYou can remove this header or enter a new one with a different value, such as `Connection: Close` to control this behaviour.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Connection",
+								"value": "keep-alive",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"id": 0,
+								"disabled": true
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"email\": \"admin@prueba.com\",\r\n    \"password\": \"changeme\"\r\n}",
@@ -44,9 +164,319 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "/auth chef",
+					"id": "e89fc6b1-8112-4bbc-95fd-5172bf76145c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"name": "cache-control",
+								"sortOrder": 2,
+								"infoTitle": "We recommend using this header",
+								"info": "Postman added \"Cache-Control: no-cache\" as a precautionary measure to prevent the server from returning stale response when one makes repeated requests.\n\nYou can remove this header in the app settings or enter a new one with a different value.",
+								"allowedToToggle": false,
+								"disableEdit": true,
+								"previewSettingsLink": "Go to settings",
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "postman-token",
+								"sortOrder": 3,
+								"infoTitle": "We recommend using this header",
+								"info": "The Postman-Token header appends a random UUID to every outgoing request. Postman adds this header for API developers to better debug requests sent and to ensure separate requests appear distinct to the receiving server.\n\nYou can remove this header in the app settings.",
+								"allowedToToggle": false,
+								"disableEdit": true,
+								"previewSettingsLink": "Go to settings",
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "content-type",
+								"sortOrder": 4,
+								"infoTitle": "This header was automatically added",
+								"info": "The Content-Type header is added to help the server identify the media type of the request body that is present in this request.\n\nUse the request body tab to control the value or to remove this header.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"previewSettingsLink": "Go to body",
+								"key": "Content-Type",
+								"value": "application/json",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "content-length",
+								"sortOrder": 5,
+								"infoTitle": "This header was automatically added",
+								"info": "The Content-Length header was added to indicate to the server the size of the request body that is added to this request. Server uses this value to parse the request body accurately.\n\nYou can remove the header or enter a new one with a different value.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"previewSettingsLink": "Go to body",
+								"key": "Content-Length",
+								"value": "<calculated when request is sent>",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "host",
+								"sortOrder": 6,
+								"infoTitle": "We recommend using this header",
+								"info": "The Host header is added to identify the domain name for which a request is being sent to the server. This header is implicitly sent by every HTTP client.\n\nYou can remove the header or enter a new one with a different value. It is most likely that without this header, your request will return an HTTP 400 error.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "user-agent",
+								"sortOrder": 7,
+								"infoTitle": "We recommend using this header",
+								"info": "The User-Agent header is added to help the server identify Postman as the HTTP requesting application or client.\n\nIt is recommended that this header be sent, but you can remove the header or enter a new one with a different value.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.32.1",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "accept",
+								"sortOrder": 8,
+								"infoTitle": "We recommend using this header",
+								"info": "The \"Accept: */*\" header is added to tell the server that Postman can understand and process all forms of response content types.\n\nIt is recommended that this header be sent, but you can remove the header or enter a new one with a different value.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Accept",
+								"value": "*/*",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "accept-encoding",
+								"sortOrder": 9,
+								"infoTitle": "We recommend using this header",
+								"info": "The Accept-Encoding header is added to indicate to the server that Postman HTTP client supports a defined list of content-encoding or compression algorithms as response.\n\nYou can remove the header or enter a new one with a different value. Doing that may not accurately render the response within the app.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "connection",
+								"sortOrder": 10,
+								"infoTitle": "We recommend using this header",
+								"info": "Postman added the Connection header to indicate the server to keep the underlying network connection open once the current response is received. This allows Postman to reuse the same connection for faster response times in subsequent requests to the same server.\n\nYou can remove this header or enter a new one with a different value, such as `Connection: Close` to control this behaviour.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Connection",
+								"value": "keep-alive",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"id": 0,
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"chef@prueba.com\",\r\n    \"password\": \"changeme\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/auth waiter",
+					"id": "dbd047f2-78c3-4493-b845-4dc1f7882031",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"name": "cache-control",
+								"sortOrder": 2,
+								"infoTitle": "We recommend using this header",
+								"info": "Postman added \"Cache-Control: no-cache\" as a precautionary measure to prevent the server from returning stale response when one makes repeated requests.\n\nYou can remove this header in the app settings or enter a new one with a different value.",
+								"allowedToToggle": false,
+								"disableEdit": true,
+								"previewSettingsLink": "Go to settings",
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "postman-token",
+								"sortOrder": 3,
+								"infoTitle": "We recommend using this header",
+								"info": "The Postman-Token header appends a random UUID to every outgoing request. Postman adds this header for API developers to better debug requests sent and to ensure separate requests appear distinct to the receiving server.\n\nYou can remove this header in the app settings.",
+								"allowedToToggle": false,
+								"disableEdit": true,
+								"previewSettingsLink": "Go to settings",
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "content-type",
+								"sortOrder": 4,
+								"infoTitle": "This header was automatically added",
+								"info": "The Content-Type header is added to help the server identify the media type of the request body that is present in this request.\n\nUse the request body tab to control the value or to remove this header.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"previewSettingsLink": "Go to body",
+								"key": "Content-Type",
+								"value": "application/json",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "content-length",
+								"sortOrder": 5,
+								"infoTitle": "This header was automatically added",
+								"info": "The Content-Length header was added to indicate to the server the size of the request body that is added to this request. Server uses this value to parse the request body accurately.\n\nYou can remove the header or enter a new one with a different value.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"previewSettingsLink": "Go to body",
+								"key": "Content-Length",
+								"value": "<calculated when request is sent>",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "host",
+								"sortOrder": 6,
+								"infoTitle": "We recommend using this header",
+								"info": "The Host header is added to identify the domain name for which a request is being sent to the server. This header is implicitly sent by every HTTP client.\n\nYou can remove the header or enter a new one with a different value. It is most likely that without this header, your request will return an HTTP 400 error.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "user-agent",
+								"sortOrder": 7,
+								"infoTitle": "We recommend using this header",
+								"info": "The User-Agent header is added to help the server identify Postman as the HTTP requesting application or client.\n\nIt is recommended that this header be sent, but you can remove the header or enter a new one with a different value.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.32.1",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "accept",
+								"sortOrder": 8,
+								"infoTitle": "We recommend using this header",
+								"info": "The \"Accept: */*\" header is added to tell the server that Postman can understand and process all forms of response content types.\n\nIt is recommended that this header be sent, but you can remove the header or enter a new one with a different value.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Accept",
+								"value": "*/*",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "accept-encoding",
+								"sortOrder": 9,
+								"infoTitle": "We recommend using this header",
+								"info": "The Accept-Encoding header is added to indicate to the server that Postman HTTP client supports a defined list of content-encoding or compression algorithms as response.\n\nYou can remove the header or enter a new one with a different value. Doing that may not accurately render the response within the app.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "connection",
+								"sortOrder": 10,
+								"infoTitle": "We recommend using this header",
+								"info": "Postman added the Connection header to indicate the server to keep the underlying network connection open once the current response is received. This allows Postman to reuse the same connection for faster response times in subsequent requests to the same server.\n\nYou can remove this header or enter a new one with a different value, such as `Connection: Close` to control this behaviour.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Connection",
+								"value": "keep-alive",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"id": 0,
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"waiter@prueba.com\",\r\n    \"password\": \"changeme\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
 				}
 			],
-			"id": "2adc6c48-77c9-4896-8e37-b4b582dd5926",
+			"id": "b2254a22-eac9-4930-9815-af671b74a980",
 			"description": "Collection containing the POST/login request"
 		},
 		{
@@ -54,7 +484,130 @@
 			"item": [
 				{
 					"name": "/users",
-					"id": "40a56489-0877-4a6c-8f9b-ef1c1cfc2c3d",
+					"id": "ed4cd278-4319-4675-b60b-4ec44c30b3ff",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"name": "cache-control",
+								"sortOrder": 2,
+								"infoTitle": "We recommend using this header",
+								"info": "Postman added \"Cache-Control: no-cache\" as a precautionary measure to prevent the server from returning stale response when one makes repeated requests.\n\nYou can remove this header in the app settings or enter a new one with a different value.",
+								"allowedToToggle": false,
+								"disableEdit": true,
+								"previewSettingsLink": "Go to settings",
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "postman-token",
+								"sortOrder": 3,
+								"infoTitle": "We recommend using this header",
+								"info": "The Postman-Token header appends a random UUID to every outgoing request. Postman adds this header for API developers to better debug requests sent and to ensure separate requests appear distinct to the receiving server.\n\nYou can remove this header in the app settings.",
+								"allowedToToggle": false,
+								"disableEdit": true,
+								"previewSettingsLink": "Go to settings",
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "host",
+								"sortOrder": 6,
+								"infoTitle": "We recommend using this header",
+								"info": "The Host header is added to identify the domain name for which a request is being sent to the server. This header is implicitly sent by every HTTP client.\n\nYou can remove the header or enter a new one with a different value. It is most likely that without this header, your request will return an HTTP 400 error.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "user-agent",
+								"sortOrder": 7,
+								"infoTitle": "We recommend using this header",
+								"info": "The User-Agent header is added to help the server identify Postman as the HTTP requesting application or client.\n\nIt is recommended that this header be sent, but you can remove the header or enter a new one with a different value.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.32.1",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "accept",
+								"sortOrder": 8,
+								"infoTitle": "We recommend using this header",
+								"info": "The \"Accept: */*\" header is added to tell the server that Postman can understand and process all forms of response content types.\n\nIt is recommended that this header be sent, but you can remove the header or enter a new one with a different value.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Accept",
+								"value": "*/*",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "accept-encoding",
+								"sortOrder": 9,
+								"infoTitle": "We recommend using this header",
+								"info": "The Accept-Encoding header is added to indicate to the server that Postman HTTP client supports a defined list of content-encoding or compression algorithms as response.\n\nYou can remove the header or enter a new one with a different value. Doing that may not accurately render the response within the app.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "connection",
+								"sortOrder": 10,
+								"infoTitle": "We recommend using this header",
+								"info": "Postman added the Connection header to indicate the server to keep the underlying network connection open once the current response is received. This allows Postman to reuse the same connection for faster response times in subsequent requests to the same server.\n\nYou can remove this header or enter a new one with a different value, such as `Connection: Close` to control this behaviour.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Connection",
+								"value": "keep-alive",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"id": 0
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"id": 1,
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users w/pagination",
+					"id": "5dee8ec0-d24c-42e0-83db-306535158d7b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -64,11 +617,19 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json",
-								"type": "text"
+								"type": "text",
+								"id": 0
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"id": 1,
+								"disabled": true
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/users?page=1&limit=20",
+							"raw": "http://localhost:8080/users?page=1&limit=3",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -84,7 +645,7 @@
 								},
 								{
 									"key": "limit",
-									"value": "20"
+									"value": "3"
 								}
 							]
 						}
@@ -93,7 +654,7 @@
 				},
 				{
 					"name": "/users",
-					"id": "2d9afdfc-5829-4f3d-88f4-9cf5b9eb3295",
+					"id": "b28245ed-e7a8-4540-90ae-8eb35cd45566",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -125,7 +686,7 @@
 				},
 				{
 					"name": "/users/{uid}",
-					"id": "1cd6d6f4-b37d-4e70-bbf1-2cc5ef71ef39",
+					"id": "59a84f60-4fe2-4b6c-8dc6-3633ef3c02e8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -148,7 +709,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/users/64f77ec24151160e56993bc9",
+							"raw": "http://localhost:8080/users/admin@prueba.com",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -156,7 +717,7 @@
 							"port": "8080",
 							"path": [
 								"users",
-								"64f77ec24151160e56993bc9"
+								"admin@prueba.com"
 							]
 						}
 					},
@@ -164,16 +725,16 @@
 				},
 				{
 					"name": "/users/{uid}",
-					"id": "a0d9f56f-e2c9-4ea9-bdfb-25403bb8afd0",
+					"id": "c64ea30d-d3df-41a0-9178-a40d88461102",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "PUT",
+						"method": "PATCH",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"iamanadmin@mail.com\",\r\n    \"password\": \"123456\",\r\n    \"role\": \"admin\"\r\n}",
+							"raw": "{\r\n    \"password\": \"123456\",\r\n    \"role\": \"waiter\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -181,7 +742,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/users/64f77ec24151160e56993bc9",
+							"raw": "http://localhost:8080/users/64f5a18ff0a4fdabe6653edb",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -189,7 +750,7 @@
 							"port": "8080",
 							"path": [
 								"users",
-								"64f77ec24151160e56993bc9"
+								"64f5a18ff0a4fdabe6653edb"
 							],
 							"query": [
 								{
@@ -206,7 +767,7 @@
 				},
 				{
 					"name": "/users/{uid}",
-					"id": "4ca025db-dd40-425c-bf39-df6438cbd535",
+					"id": "b3bcb04c-cd15-4a18-9747-4fc51d457e85",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -223,7 +784,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/users/64f5724b63116e4ec7deeee6",
+							"raw": "http://localhost:8080/users/64f5a64f57178597aeaaf8a3",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -231,14 +792,14 @@
 							"port": "8080",
 							"path": [
 								"users",
-								"64f5724b63116e4ec7deeee6"
+								"64f5a64f57178597aeaaf8a3"
 							]
 						}
 					},
 					"response": []
 				}
 			],
-			"id": "30b50b29-d160-4405-af3a-2099fec98bca",
+			"id": "c2b4a105-2829-4145-b370-01398271f529",
 			"description": "Collection containing all the request for the users endpoint."
 		},
 		{
@@ -246,7 +807,7 @@
 			"item": [
 				{
 					"name": "/orders",
-					"id": "3755d781-d0db-4962-a04c-2d6c95bed2d5",
+					"id": "007a1b78-5763-4438-bff6-9a28ab7ba77e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -269,12 +830,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:80/orders",
+							"raw": "http://localhost:8080/orders",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "80",
+							"port": "8080",
 							"path": [
 								"orders"
 							]
@@ -283,8 +844,61 @@
 					"response": []
 				},
 				{
+					"name": "/orders (w/pagination)",
+					"id": "eee3d2b8-fcfb-4b3d-9c1b-53da0836e4a0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "inherit"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/orders?page=1&limit=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"sortOrder": 0
+								},
+								{
+									"key": "limit",
+									"value": "1",
+									"sortOrder": 1
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "/orders",
-					"id": "8de7ea92-607d-43b9-892c-d391b41bb1da",
+					"id": "73074175-b336-4810-b41c-fc5ce98b488c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -299,7 +913,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "",
+							"raw": "{   \"client\": \"María\",\r\n    \"table\": 8,\r\n    \"products\" : [\r\n        {\r\n            \"_id\": \"64f902742a9a27c60d0bc61a\",\r\n            \"name\": \"Tofu salteado con verduras\",\r\n            \"qty\": 1,\r\n            \"price\": 9000,\r\n            \"image\": \"https://danzadefogones.com/wp-content/uploads/2018/12/Tofu-Salteado-6.jpg\",\r\n            \"type\": \"Almuerzo\",\r\n            \"dateEntry\": \"2023-09-07 01:51:32\"\r\n        },\r\n        {\r\n            \"_id\": \"64f9022d2a9a27c60d0bc617\",\r\n            \"name\": \"Palomitas de caramelo\",\r\n            \"qty\": 5,\r\n            \"price\": 7000,\r\n            \"image\": \"https://alsuper.online/products/413202_p.png\",\r\n            \"type\": \"Desayuno\",\r\n            \"dateEntry\": \"2023-09-06 22:50:21\"\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -307,12 +921,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:80/orders",
+							"raw": "http://localhost:8080/orders",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "80",
+							"port": "8080",
 							"path": [
 								"orders"
 							]
@@ -322,7 +936,7 @@
 				},
 				{
 					"name": "/orders/{orderId}",
-					"id": "2191c406-bcee-447f-a96d-438ab9fb589c",
+					"id": "d5f957a8-b1f7-4333-a6ed-6d167b1945b5",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -336,15 +950,15 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:80/orders/{orderId}",
+							"raw": "http://localhost:8080/orders/64ff1928ab841b7e24e196d7",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "80",
+							"port": "8080",
 							"path": [
 								"orders",
-								"{orderId}"
+								"64ff1928ab841b7e24e196d7"
 							]
 						}
 					},
@@ -352,7 +966,7 @@
 				},
 				{
 					"name": "/orders/{orderId}",
-					"id": "dff1248a-e562-42aa-b101-ffe256200002",
+					"id": "dfabe904-57ca-4422-9e48-85c70b3eb663",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -365,16 +979,25 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"status\": \"Entregado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://localhost:80/orders/{orderId}",
+							"raw": "http://localhost:8080/orders/64ff1928ab841b7e24e196d7",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "80",
+							"port": "8080",
 							"path": [
 								"orders",
-								"{orderId}"
+								"64ff1928ab841b7e24e196d7"
 							]
 						}
 					},
@@ -382,7 +1005,7 @@
 				},
 				{
 					"name": "/orders/{orderId}",
-					"id": "93021f7d-b35a-4a17-ad75-a1c76c9de857",
+					"id": "07516f62-c454-4d63-b903-2f63104f12a9",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -391,7 +1014,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"iamawaiter2@mail.com\",\r\n    \"password\": \"123456\",\r\n    \"role\": \"waiter\"\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -399,22 +1022,22 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:80/orders/{orderId}",
+							"raw": "http://localhost:8080/orders/64ff18ef2b21a34067be3be0",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "80",
+							"port": "8080",
 							"path": [
 								"orders",
-								"{orderId}"
+								"64ff18ef2b21a34067be3be0"
 							]
 						}
 					},
 					"response": []
 				}
 			],
-			"id": "1bcd7559-4fc7-409b-bef0-1b1c3fa79543",
+			"id": "760134ca-2d13-4735-92aa-8f106a406fce",
 			"description": "Collection containing all the request for the orders endpoint."
 		},
 		{
@@ -422,7 +1045,7 @@
 			"item": [
 				{
 					"name": "/products",
-					"id": "a524e193-317f-417a-bbb9-bc88bc5dbcab",
+					"id": "4dfddbd1-c14b-4c34-a9ed-7d7f791fd6af",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -445,12 +1068,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:80/products",
+							"raw": "http://localhost:8080/products",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "80",
+							"port": "8080",
 							"path": [
 								"products"
 							]
@@ -459,8 +1082,56 @@
 					"response": []
 				},
 				{
+					"name": "/products w/ pagination",
+					"id": "43cb430b-039b-4852-bf72-fed55c4f509e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products?page=1&limit=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "/products",
-					"id": "a82f7ccd-245a-404a-a62e-4269779b755c",
+					"id": "01a7860b-8ead-4d29-b482-2a72ba58c2ea",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -475,7 +1146,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "",
+							"raw": "{\r\n        \"name\": \"Tofu salteado con verduras\",\r\n        \"price\": 10000,\r\n        \"image\": \"https://danzadefogones.com/wp-content/uploads/2018/12/Tofu-Salteado-6.jpg\",\r\n        \"type\": \"Almuerzo\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -483,12 +1154,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:80/products",
+							"raw": "http://localhost:8080/products",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "80",
+							"port": "8080",
 							"path": [
 								"products"
 							]
@@ -498,7 +1169,7 @@
 				},
 				{
 					"name": "/products/{productId}",
-					"id": "bc15dc2b-70be-4615-8dc8-5ace761a8a1d",
+					"id": "e2d17730-da4d-42d6-84f9-395ac991ac66",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -521,15 +1192,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:80/products/{productId}",
+							"raw": "http://localhost:8080/products/64f902742a9a27c60d0bc61a",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "80",
+							"port": "8080",
 							"path": [
 								"products",
-								"{productId}"
+								"64f902742a9a27c60d0bc61a"
 							]
 						}
 					},
@@ -537,7 +1208,7 @@
 				},
 				{
 					"name": "/products/{productId}",
-					"id": "cb052791-3b99-47a0-9272-a5a2f7319054",
+					"id": "bc0f66dd-94d5-4492-bb48-5de3592fefbe",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -552,7 +1223,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "",
+							"raw": "{\r\n        \"type\": \"Almuerzo\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -560,15 +1231,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:80/products/{productId}",
+							"raw": "http://localhost:8080/products/64f902742a9a27c60d0bc61a",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "80",
+							"port": "8080",
 							"path": [
 								"products",
-								"{productId}"
+								"64f902742a9a27c60d0bc61a"
 							]
 						}
 					},
@@ -576,7 +1247,7 @@
 				},
 				{
 					"name": "/products/{productId}",
-					"id": "62358c05-5931-4d44-ace9-627d32c9010c",
+					"id": "5c51efab-daa5-4599-a2fa-1cf97e85bf8a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -599,12 +1270,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:80/products/{productId}",
+							"raw": "http://localhost:8080/products/{productId}",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "80",
+							"port": "8080",
 							"path": [
 								"products",
 								"{productId}"
@@ -614,7 +1285,7 @@
 					"response": []
 				}
 			],
-			"id": "614580ab-0272-41ec-9f46-e9e94de94619",
+			"id": "db802571-3c75-4207-a857-350d4a98e5df",
 			"description": "Collection containing all the request for the products endpoint."
 		}
 	],
@@ -623,7 +1294,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGY1NzJhYTYzMTE2ZTRlYzdkZWVlZjEiLCJyb2xlIjp7InJvbGUiOiJhZG1pbiIsImFkbWluIjp0cnVlfSwiZW1haWwiOiJhZG1pbkBwcnVlYmEuY29tIiwiaWF0IjoxNjkzOTc2MTExLCJleHAiOjE2OTM5Nzk3MTF9.3IK3cMDxqkV7nJqSLr4AzcMnpDFvX6HJ5A411K4QILU",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGY1NzJhYTYzMTE2ZTRlYzdkZWVlZjEiLCJyb2xlIjp7InJvbGUiOiJhZG1pbiIsImFkbWluIjp0cnVlfSwiZW1haWwiOiJhZG1pbkBwcnVlYmEuY29tIiwiaWF0IjoxNjk0NDU2ODUxLCJleHAiOjE2OTQ0NjA0NTF9.SR7FESEyajPIrka9pXtXZPVeJPITsvzHR_amzVtWFmU",
 				"type": "string"
 			}
 		]
@@ -632,7 +1303,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "cf4550aa-1e8c-4c4e-823d-a048cdf96660",
+				"id": "756d46eb-e712-45d8-8055-e88c7afd9d04",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -642,7 +1313,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "366f4b7f-9d72-4d83-8389-0aa200f05cc1",
+				"id": "2184bd85-a6da-4ee4-8a58-3a6e0c064757",
 				"type": "text/javascript",
 				"exec": [
 					""
