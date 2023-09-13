@@ -43,7 +43,6 @@ const initAdminUser = async (app, next) => {
       const user = new User(adminUser);
       user.save();
       console.info('Usuario administrador creado con éxito');
-      return user;
     } catch (error) {
       console.error('Error al crear usuario', error);
     }
