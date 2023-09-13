@@ -49,9 +49,7 @@ const initAdminUser = async (app, next) => {
     }
   } else {
     console.log('Ya existe usuario administrador:', userExists);
-    return userExists;
   }
-  // mongoose.disconnect();
   next();
 };
 
@@ -263,7 +261,7 @@ module.exports = (app, next) => {
       await user.save();
 
       // Enviar la respuesta con los detalles del usuario modificado
-      res.status(200).json({
+      return res.status(200).json({
         message: 'Usuario actualizado exitosamente',
         _id: uid,
         email: user.email,
