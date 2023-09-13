@@ -18,8 +18,6 @@ app.use(authMiddleware(secret));
 app.use(cors({
   origin: ['https://burger-queen-api-wp1d-dev.fl0.io/', 'https://bq-api-client.vercel.app', '*'],
   methods: ['GET', 'POST', 'PATCH', 'DELETE'],
-  credentials: true,
-  optionSuccessStatus: 200,
 }));
 
 // Registrar rutas
