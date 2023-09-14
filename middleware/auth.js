@@ -6,7 +6,7 @@ module.exports = secret => (req, res, next) => {
   const { authorization } = req.headers;
 
   if (!authorization) {
-    console.log('No se proporcionó autorización');
+    console.log('No se proporcionó autorización', req.headers, authorization);
     return next();
   }
 
