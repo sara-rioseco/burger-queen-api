@@ -16,7 +16,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(authMiddleware(secret));
 app.use(cors({
-  origin: ['https://burger-queen-api-wp1d-dev.fl0.io/', 'https://bq-api-client.vercel.app', 'https://bq-api-sara-rioseco.vercel.app/'],
+  // origin: ['https://burger-queen-api-wp1d-dev.fl0.io/', 'https://bq-api-client.vercel.app', 'https://bq-api-sara-rioseco.vercel.app/', 'http://localhost:8080'],
+  origin: '*',
   methods: ['GET', 'POST', 'PATCH', 'DELETE'],
 }));
 
