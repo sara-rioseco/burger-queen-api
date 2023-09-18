@@ -5,6 +5,6 @@ db-data/
 coverage/
 e2e/globalConfig.json
 .env
-config.js
+*config.js
 docker-compose.yml
 Dockerfile
