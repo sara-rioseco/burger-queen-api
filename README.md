@@ -1,143 +1,55 @@
-# Burger Queen - API con Node.js
+# Burger Queen API (NodeJS)🍔
 
-## Índice
+## Índice 📖
 
-* [1. Resumen del proyecto](#1-resumen-del-proyecto)
-* [2. Requerimientos del cliente](#2-requerimientos-del-cliente)
-* [3. Recursos y documentación](#3-recursos-y-documentaci%C3%B3n)
-* [4. Integración con Docker](#4-integraci%C3%B3n-con-docker)
-* [5. Consideraciones](#6-consideraciones)
-* [6. Despliegue](#7-despliegue)
-* [7. Testing](#8-testing)
-* [8. Organización](#8-organizaci%C3%B3n)
-* [9. Criterios de aceptación](#9-criterios-de-aceptaci%C3%B3n)
-* [10. Objetivos de aprendizaje](#10-objetivos-de-aprendizaje)
+* [1. Resumen del proyecto 📄](#1-resumen-del-proyecto-)
+* [2. Requerimientos del cliente 💁](#2-requerimientos-del-cliente-)
+* [3. Recursos y documentación 📑](#3-recursos-y-documentaci%C3%B3n-)
+* [4. Integración con Docker 🐋](#4-integraci%C3%B3n-con-docker-)
+* [5. Consideraciones ❕](#5-consideraciones-)
+* [6. Despliegue 🚀](#6-despliegue-)
+* [7. Testing 🤡](#7-testing-)
+* [8. Organización 📆](#8-organizaci%C3%B3n-)
+* [9. Criterios de aceptación ☑️](#9-criterios-de-aceptaci%C3%B3n-)
+* [10. Objetivos de aprendizaje 👩‍🎓](#10-objetivos-de-aprendizaje-)
 
-## 1. Resumen del proyecto
+## 1. Resumen del proyecto 📄
 
-![Node.js logo](https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg)
+Esta API es la segunda parte de nuestro proyecto final en el bootcamp de 
+Desarrollo Web en Laboratoria y está pensado para ser utilizado como back-end 
+en integración con la interfaz implementada en el proyecto anterior 
+llamada (Burger Queen API Client).
 
-Un pequeño restaurante de hamburguesas, que está creciendo, necesita un
-sistema a través del cual puedan tomar pedidos usando una _tablet_, y enviarlos
-a la cocina para que se preparen ordenada y eficientemente.
+Esta API ha sido creada para un pequeño restaurante, que necesita manejar y 
+amdinistrar sus productos y pedidos a través de un dispositivo tablet.
+Para esto se utiliza una base de datos y un servidor que recibirá y enviará información 
+de usuarios, productos y órdenes según el usuario necesite.
 
-Este proyecto tiene dos áreas: interfaz web (cliente) y API (servidor). Nuestra
-clienta nos ha solicitado desarrollar la API que se puede integrar con la
-interfaz, que otro equipo de desarrolladoras está trabajando simultáneamente.
+Al inicializar el servidor, este verificará si existe un usuario administrador, 
+si esto no es así, creará uno con las credenciales por defecto.
+Cada usuario tendrá un rol, que puede ser "admin", "waiter" o "chef" y dependiendo 
+de su rol, podrá interactuar de distintas formas con la base de datos.
 
-## 2. Requerimientos del cliente
 
-Con una API en este caso nos referimos a un _servidor web_, que es
-básicamente un programa que _escucha_ en un puerto de red, a través del cual
-podemos enviarle _consultas_ (_request_) y obtener _respuestas_ (_response_)
-usando el protocolo HTTP (o HTTPS).
-
-Un servidor web debe _manejar_ consultas entrantes y producir respuestas a esas
-consultas que serán enviadas de vuelta al _cliente_. Cuando hablamos de
-_aplicaciones de servidor_, esto implica una arquitectura de _cliente/servidor_,
-donde el cliente es un programa que hace consultas a través de una red (por
-ejemplo el navegador, cURL, etc.), y el _servidor_ es el programa que recibe
-estas consultas y las responde.
-
-[Node.js](https://nodejs.org/) nos permite crear servidores web súper eficientes
-de manera relativamente simple y todo esto usando JavaScript!
-
-En este proyecto partimos de un _boilerplate_ que ya contiene una serie de
-_endpoints_ (puntos de conexión o URLs) y nos piden completar la aplicación.
-Esto implica que tendremos que partir por leer la implementación existente, y
-familiarizarnos con el _stack_ elegido ([Node.js](https://nodejs.org/) y
-[Express](https://expressjs.com/)) y complementarlo con un motor de bases de
-datos. Recomendamos el uso de [MongoDB](https://www.mongodb.com/) y tenemos una
-[guía para empezar con MongoDB](https://github.com/Laboratoria/DEV004-burger-queen-api/blob/main/guides/GETTING-STARTED-MONGODB.md).
+## 2. Requerimientos del cliente 💁
 
 La clienta nos ha dado un [link a la documentación](https://app.swaggerhub.com/apis-docs/ssinuco/BurgerQueenAPI/2.0.0)
 que especifica el comportamiento esperado de la API que expondremos por
-HTTP. Ahí puedes encontrar todos los detalles de qué _endpoints_ debe
+HTTP. Ahí se pueden encontrar todos los detalles de qué _endpoints_ debe
 implementar la aplicación, qué parámetros esperan, qué deben responder, etc.
 
-El objetivo principal de aprendizaje es adquirir experiencia con **Node.js**
-como herramienta para desarrollar _aplicaciones de servidor_, junto con una
-serie de herramientas comunes usadas en este tipo de contexto (Express como
-framework, MongoDB como base datos, etc).
+## 3. Recursos y documentación 📑
 
-En este proyecto tendrás que construir un servidor web que debe _servir_ `JSON`
-sobre `HTTP`, y desplegarlo en un servidor en la nube.
+`PENDING...`
 
-Para completar el proyecto tendrás que familiarizarte con conceptos como
-**rutas** (_routes_), **URLs**, **HTTP** y **REST** (verbs, request, response,
-headers, body, status codes...), **JSON**, **JWT** (_JSON Web Tokens_),
-**conexión con una base datos** (`MongoDB`),
-**variables de entorno**, **deployment**, etc.
+## 4. Integración con Docker 🐋
 
-## 3. Recursos y documentación
+Nuestro proyecto tiene la configuración necesaria para ser ejecutado con Docker,
+utilizando el comando `docker compose up`.
+Esto correra un multicontenedor que contiene dos imágenes, una para el servicio
+de la database de [MongoDB](https://www.mongodb.com/) y otra para el servicio de [Node](https://nodejs.org/).
 
-## 4. Consideraciones generales
-
-Este proyecto se realizará en duplas y podrá integrarse con el proyecto
-[Burger Queen API client](../04-burger-queen-api-client)
-que desarrolle simultáneamente el equipo de Frontend developers de tu squad.
-
-La lógica del proyecto debe estar implementada completamente en JavaScript.
-En este proyecto está permitido usar librerías o frameworks, asi como
-extensiones al lenguaje con `babel` (caso en el cual deberás incluir un
-comando `npm run build`).
-
-Los tests deben cubrir un mínimo del 90% de _statements_, _functions_,
-_lines_ y _branches_. Si bien el boilerplate no incluye la configuración para
-pruebas unitarias, estas son obligatorias.
-
-Otro requerimiento del equipo de QA de nuestra clienta es realizar
-**pruebas _end-to-end_**, que usaremos para verificar el comportamiento desde el
-punto de vista de HTTP, desde afuera del servidor. Estos tests, a diferencia de
-las pruebas unitarias, no prueban cada pieza por separado sino que prueban la
-aplicación completa, de principio a fin. Estas pruebas, al no hacer uso directo
-del código fuente de la aplicación, pueden ejecutarse directamente sobre una URL
-remota, ya que la interfaz sometida a pruebas es HTTP.
-
-El _boilerplate_ ya contiene el setup y configuración
-necesaria para ejecutar todos los tests _end-to-end_ con el comando `npm run test:e2e`.
-
-```sh
-# Corre pruebas e2e sobre instancia local. Esto levanta la aplicación con npm
-# start y corre los tests contra la URL de esta instancia (por defecto
-# http://127.0.0.1:8080).
-npm run test:e2e
-
-# Corre pruebas e2e sobre URL remota
-REMOTE_URL=<TODO: poner URL> npm run test:e2e
-```
-
-Las pruebas _end-to-end_ ya están completas en el _boilerplate_, así que puedes
-usarlas como guía de implementación y checklist de completitud.
-
-## 5. ## 7. Pistas, tips y lecturas complementarias
-
-### Primeros pasos
-
-> :information_source: Antes de comenzar a programar te recomendamos leer y
-> seguir con detenimiento la [**guía de _primeros pasos_**](https://github.com/Laboratoria/DEV002-burger-queen-api/blob/main/GETTING-STARTED.md)
-> para ayudarte con el stack recomendado y configurar tu entorno de desarrollo.
-
-### Otros recursos
-
-* [Express](https://expressjs.com/)
-* [MongoDB](https://www.mongodb.com/)
-* [MongoDB Node Driver](https://www.mongodb.com/docs/drivers/node/current/)
-* [docker](https://docs.docker.com/)
-* [docker compose](https://docs.docker.com/compose/)
-* [¿Qué es Docker? | Curso de Docker | Platzi Cursos](https://youtu.be/hQgvt-s-AHQ)
-* [Postman](https://www.getpostman.com)
-* [Variable de entorno - Wikipedia](https://es.wikipedia.org/wiki/Variable_de_entorno)
-* [`process.env` - Node.js docs](https://nodejs.org/api/process.html#process_process_env)
-
-## 8. Organización
-
-## 9. Criterios de aceptación
-
-Todos los criterios de aceptación mínimos del proyecto fueron logrados.
-A continuación el detalle de cada uno:
-
-### 9.1 API
+## 5. Consideraciones ❕
 
 La API expone los siguientes endpoints:
 
@@ -168,24 +80,16 @@ La API expone los siguientes endpoints:
 * [x] `PATCH /orders/:orderId`
 * [x] `DELETE /orders/:orderId`
 
-### 9.2 CLI
-
 La API se puede ejecutar con el comando **`npm start`**
-Esto se encargará de cargar nuestra aplicación node y además puede recibir el puerto al que escuchar.
-
-#### 9.2.1 Argumentos de línea de comando
-
-Podemos especificar el puerto en el que debe arrancar la aplicación pasando un
+Esto se encargará de cargar nuestra aplicación node.
+Opcionalmente, podemos especificar el puerto en el que debe arrancar la aplicación pasando un
 argumento a la hora de invocar nuestro programa:
 
 ```sh
 # Arranca la aplicación en el puerto 8888 usando npm
 npm start 8888
 ```
-
-#### 9.2.2 Variables de entorno
-
-Nuestra aplicación usa las siguientes variables de entorno:
+El proyecto usa las siguientes variables de entorno:
 
 * `PORT`: Si no se ha especificado un puerto como argumento de línea de comando,
   podemos usar la variable de entorno `PORT` para especificar el puerto. Valor
@@ -200,20 +104,51 @@ Nuestra aplicación usa las siguientes variables de entorno:
 * `ADMIN_PASSWORD`: Si hemos especificado un `ADMIN_EMAIL`, debemos pasar
   también una contraseña para el usuario admin. Valor por defecto: `changeme`.
 
-### 9.3 Despliegue (Deployment)
+## 6. Despliegue 🚀
 
-El despliegue fue realizado con la plataforma [Fl0](https://www.fl0.com) en conjunto con [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+El despliegue de la API fue realizado con [vercel](https://vercel.com/).
 
-Se puede acceder a él desde el enlace: [https://burger-queen-api-wp1d-dev.fl0.io/](https://burger-queen-api-wp1d-dev.fl0.io/)
+Se puede acceder a él desde el enlace: [https://bq-api.vercel.app/](https://bq-api.vercel.app/)
 
-### 9.4 Hacker Edition - Integración con Docker (DevOps) 
+## 7. Testing 🤡
 
-Nuestro proyecto tiene la configuración necesaria para ser ejecutado con Docker,
-utilizando el comando `docker compose up`.
-Esto correra un multicontenedor que contiene dos imágenes, una para el servicio
-de la database de MongoDB y otra para el servicio de Node.
+La API fue testeada con pruebas unitarias y end-to-end (e2e). Los resultados son los siguientes:
 
-## 10. Objectivos de aprendizaje
+### 7.1 Pruebas unitarias (unit testing)
+
+`PENDING...` 
+
+### 7.2 Pruebas E2E
+
+A continuación, presentamos los resultados de las pruebas E2E.
+
+![Resultados pruebas end-to-end](https://raw.githubusercontent.com/sara-rioseco/burger-queen-api/main/assets/e2e-tests.PNG)
+
+## 8. Organización 📆
+
+Para nuestra organización y planificación utilizamos la herramienta Trello.
+A continuación una imágen de nuestras tareas y cómo estas fueron distribuidas en cada sprint.
+
+![Planificación en Trello](https://raw.githubusercontent.com/sara-rioseco/burger-queen-api/main/assets/trello.PNG)
+
+## 9. Criterios de aceptación ☑
+
+Todos los criterios de aceptación mínimos del proyecto fueron logrados.
+A continuación el detalle de cada uno:
+
+### 9.1 API, exponer los endpoints mínimos: ✔️
+#### 9.1.1 Rutas `/` ✔️
+#### 9.1.2 Rutas `/auth` ✔️
+#### 9.1.3 Rutas `/users` ✔️
+#### 9.1.4 Rutas `/products` ✔️
+#### 9.1.5 Rutas `/orders` ✔️
+### 9.2 CLI ✔️
+#### 9.2.1 Argumentos de línea de comando ✔️
+#### 9.2.2 Variables de entorno ✔️
+### 9.3 Despliegue (Deployment) ✔️
+### 9.4 Hacker Edition - Integración con Docker (DevOps) ✔️
+
+## 10. Objetivos de aprendizaje 👩‍🎓
 
 ### Node.js
 
@@ -255,7 +190,7 @@ de la database de MongoDB y otra para el servicio de Node.
 - [x] **Verbos HTTP**
 - [x] **Códigos de status de HTTP**
 - [x] **Encodings y JSON**
-- [ ] **CORS (Cross-Origin Resource Sharing)**
+- [x] **CORS (Cross-Origin Resource Sharing)**
 
 ### Autenticación
 
