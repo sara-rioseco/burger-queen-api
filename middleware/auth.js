@@ -6,20 +6,19 @@ module.exports = secret => (req, res, next) => {
   const { authorization } = req.headers;
 
   if (!authorization) {
-    console.log('No se proporcionó autorización', 'AQUI REQ', req);
     return next();
   }
 
   const [type, token] = authorization.split(' ');
 
   if (type.toLowerCase() !== 'bearer') {
-    console.log('Tipo de autorización no válido');
+    console.info('Tipo de autorización no válido');
     return next();
   }
 
   jwt.verify(token, secret, (err, decodedToken) => {
     if (err) {
-      console.log('Error al verificar el token:', err.message);
+      console.info('Error al verificar el token:', err.message);
       return res.status(403).json({ message: err.message });
     }
 

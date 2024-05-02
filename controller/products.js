@@ -17,8 +17,10 @@ module.exports = {
                 const startIndex = (page - 1) * limit;
                 const endIndex = page * limit
                 const paginatedProducts = products.slice(startIndex, endIndex);
+                console.info('Productos obtenidos exitosamente.');
                 res.status(200).json(paginatedProducts)
             } else {
+                console.info('Productos obtenidos exitosamente.');
                 res.status(200).json(products)
             }
         } catch (err) {

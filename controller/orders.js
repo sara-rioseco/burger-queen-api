@@ -16,6 +16,7 @@ module.exports = {
       
       res.set('Link', '</orders?page=' + currentPage.prev + '&limit=' + currentPage.limit + '>; rel="prev" , </orders?page=' + currentPage.next + '&limit=' + currentPage.limit + '>; rel="next" , </orders?page=' + currentPage.first + '&limit=' + currentPage.limit + '>; rel="first" , </orders?page=' + currentPage.last + '&limit=' + currentPage.limit + '>; rel="last"');
       res.set('total-count', orders.length);
+      console.info('Ordenes obtenidas exitosamente');
       res.status(200).json(currentPage.pageData)
           
     } catch (error) {
@@ -39,6 +40,7 @@ module.exports = {
       if (!order) {
         return res.status(404).json({ error: 'La orden no existe' });
       }
+      console.info('Orden obtenida exitosamente');
       res.status(200).json({
         message: 'Orden encontrada',
         id: order._id,

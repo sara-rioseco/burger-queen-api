@@ -149,7 +149,7 @@ module.exports = () => new Promise((resolve, reject) => {
       .then(createTestUser)
       .then(resolve)
       .catch((err) => {
-        console.log('there was an error');
+        console.error('there was an error');
         kill(child.pid, 'SIGKILL', () => reject(err));
       });
   }).catch((error) => console.error(error));
