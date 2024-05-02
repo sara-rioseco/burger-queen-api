@@ -70,6 +70,7 @@ module.exports = (app, nextMain) => {
         return res.status(401).json({ message: 'Sin autorización' });
       }
 
+      console.info('Producto obtenido exitosamente.');
       // Devolver una respuesta exitosa
       res.status(200).json({
         message: 'producto encontrado',
@@ -136,7 +137,7 @@ module.exports = (app, nextMain) => {
       const isAuth = req.authorization !== '';
 
       if (!isAuth) {
-        return res.status(401).json({ message: 'No hay infromación de autorización' });
+        return res.status(401).json({ message: 'No hay información de autorización' });
       }
 
       // Verificar si ya existe el producto
@@ -168,6 +169,7 @@ module.exports = (app, nextMain) => {
 
       await client.close();
 
+      console.info('Producto creado exitosamente.');
       // Enviar la respuesta con los detalles del producto creado
       res.status(200).json({
         id: insertedProduct.insertedId,
@@ -274,6 +276,7 @@ module.exports = (app, nextMain) => {
       // Guardar los cambios en la base de datos
       await productToUpdate.save();
 
+      console.info('Producto actualizado exitosamente.');
       // Devolver una respuesta exitosa con los detalles del producto actualizado
       res.status(200).json({
         id: productToUpdate._id,
@@ -337,6 +340,7 @@ module.exports = (app, nextMain) => {
       // Eliminar la producto de la base de datos
       await Product.deleteOne({ _id: productToDelete._id });
 
+      console.info('Producto eliminado exitosamente.');
       // Devolver una respuesta exitosa
       return res.status(200).json({
         message: 'producto eliminado exitosamente',

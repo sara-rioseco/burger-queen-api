@@ -47,7 +47,7 @@ const initAdminUser = async (app, next) => {
       console.error('Error al crear usuario', error);
     }
   } else {
-    console.log('Ya existe usuario administrador:', userExists);
+    console.info('Ya existe usuario administrador:', userExists);
   }
   next();
 };
@@ -165,7 +165,7 @@ module.exports = (app, next) => {
       // Insertar el nuevo usuario en la base de datos
       const insertedUser = await usersCollection.insertOne(newUser);
       await client.close();
-
+      console.info('Usuario creado exitosamente.');
       // Enviar la respuesta con los detalles del usuario creado
       res.status(200).json({
         id: insertedUser.insertedId,
@@ -259,6 +259,7 @@ module.exports = (app, next) => {
       }
       await user.save();
 
+      console.info('Usuario actualizado exitosamente.');
       // Enviar la respuesta con los detalles del usuario modificado
       return res.status(200).json({
         message: 'Usuario actualizado exitosamente',
@@ -319,6 +320,7 @@ module.exports = (app, next) => {
       // Eliminar la usuario de la base de datos
       await User.deleteOne({ _id: userToDelete._id });
 
+      console.info('Usuario eliminado exitosamente.');
       // Devolver una respuesta exitosa
       return res.status(200).json({
         message: 'Usuario eliminado exitosamente',

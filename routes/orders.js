@@ -162,6 +162,7 @@ module.exports = (app, nextMain) => {
       const insertedOrder = await orders.insertOne(newOrder);
       await mongoClient.close();
 
+      console.info('Orden creada exitosamente');
       // Enviar la respuesta con los detalles de la orden creada
       res.status(200).json({
         message: 'Orden creada exitosamente',
@@ -264,6 +265,7 @@ module.exports = (app, nextMain) => {
       }
       await order.save();
 
+      console.info('Orden actualizada exitosamente');
       // Enviar la respuesta con los detalles actualizados
       res.status(200).json({
         message: 'Orden actualizada exitosamente',
@@ -325,6 +327,7 @@ module.exports = (app, nextMain) => {
       // Eliminar orden de la db
       await order.deleteOne({ _id: order._id });
 
+      console.info('Orden eliminada exitosamente');
       // Devolver una respuesta exitosa
       return res.status(200).json({
         message: 'Orden eliminada exitosamente',

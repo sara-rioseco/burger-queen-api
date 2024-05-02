@@ -21,7 +21,7 @@ module.exports = {
       res.set('Link', '</users?page=' + currentPage.prev + '&limit=' + currentPage.limit + '>; rel="prev" , </users?page=' + currentPage.next + '&limit=' + currentPage.limit + '>; rel="next" , </users?page=' + currentPage.first + '&limit=' + currentPage.limit + '>; rel="first" , </users?page=' + currentPage.last + '&limit=' + currentPage.limit + '>; rel="last"');
       res.set('total-count', users.length);
       res.status(200).json(currentPage.pageData)
-          
+      console.info('Usuarios obtenidos exitosamente.');
     } catch (error) {
         console.error('Error al obtener los usuarios', error);
     } finally {
@@ -52,6 +52,7 @@ module.exports = {
         return res.status(403).json({ error: 'No tienes autorización para ver esta información' });
       }
 
+      console.info('Usuario encontrado.');
       // Devolver una respuesta exitosa
       res.status(200).json({
         message: 'Usuario encontrado',
