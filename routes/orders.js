@@ -94,7 +94,6 @@ module.exports = (app, nextMain) => {
         client, table, products,
       } = req.body;
       const { userId } = req;
-      console.log('req here', req.body);
       if (!userId || !client || !table || products.length === 0) {
         return res.status(400).json({ message: 'Debe proporcionar los datos mandatorios' });
       }
@@ -120,7 +119,7 @@ module.exports = (app, nextMain) => {
         const formatedProduct = {
           qty: item.qty,
           product: {
-            id: item.product._id,
+            id: item.product.id,
             name: item.product.name,
             price: item.product.price,
             image: item.product.image,
@@ -215,7 +214,6 @@ module.exports = (app, nextMain) => {
       } = req.body; // nueva data para la orden
       const { orderId } = req.params; // id de orden a cambiar
       const { userId } = req.userId; // usuario haciendo el cambio
-
       if (!isAuthenticated(req)) {
         return res.status(401).json({ error: 'Sin autorización' });
       }
@@ -247,11 +245,11 @@ module.exports = (app, nextMain) => {
         order.status = status;
       }
       if (products) {
-        const formatProducts = (products) => products.map(item => {
+        const formatProducts = (prod) => prod.map(item => {
           const formatedProduct = {
             qty: item.qty,
             product: {
-              id: item.product._id,
+              id: item.product.id,
               name: item.product.name,
               price: item.product.price,
               image: item.product.image,
