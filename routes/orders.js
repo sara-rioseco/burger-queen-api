@@ -94,7 +94,7 @@ module.exports = (app, nextMain) => {
         client, table, products,
       } = req.body;
       const { userId } = req;
-
+      console.log('req here', req.body);
       if (!userId || !client || !table || products.length === 0) {
         return res.status(400).json({ message: 'Debe proporcionar los datos mandatorios' });
       }
@@ -120,12 +120,12 @@ module.exports = (app, nextMain) => {
         const formatedProduct = {
           qty: item.qty,
           product: {
-            id: item._id,
-            name: item.name,
-            price: item.price,
-            image: item.image,
-            type: item.type,
-            dateEntry: item.dateEntry,
+            id: item.product._id,
+            name: item.product.name,
+            price: item.product.price,
+            image: item.product.image,
+            type: item.product.type,
+            dateEntry: item.product.dateEntry,
           },
         };
         return formatedProduct;
@@ -251,12 +251,12 @@ module.exports = (app, nextMain) => {
           const formatedProduct = {
             qty: item.qty,
             product: {
-              id: item._id,
-              name: item.name,
-              price: item.price,
-              image: item.image,
-              type: item.type,
-              dateEntry: item.dateEntry,
+              id: item.product._id,
+              name: item.product.name,
+              price: item.product.price,
+              image: item.product.image,
+              type: item.product.type,
+              dateEntry: item.product.dateEntry,
             },
           };
           return formatedProduct;
